@@ -6,15 +6,15 @@ def next_bigger(n):
     perm = list(permutations(numlist, len(numlist)))
     concat_numlist = [int("".join([str(i) for i in j])) for j in perm]
     concat_numlist.sort()
+    concat_numlist.reverse()
 
     if concat_numlist.index(n) == len(concat_numlist) -1:
         return -1
     else:
-        return concat_numlist[concat_numlist.index(n) + 1]
+        print(concat_numlist)
+        return concat_numlist[concat_numlist.index(n) - 1]
 
 
 
-print(next_bigger(510))
-print(next_bigger(12))
-print(next_bigger(513))
-print(next_bigger(9))
+
+print(next_bigger(414))
